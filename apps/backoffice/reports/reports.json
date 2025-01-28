@@ -1,0 +1,137 @@
+[
+  {
+    "description": "\tCategory",
+    "keyword": "Feature",
+    "name": "Admin Portal",
+    "line": 1,
+    "id": "Admin_Portal.feature",
+    "tags": [],
+    "elements": [
+      {
+        "executed": true,
+        "id": "As_an_admin__I_should_be_able_to_able_to_logout",
+        "keyword": "Scenario",
+        "name": "As an admin,  I should be able to able to logout",
+        "description": "",
+        "type": "scenario",
+        "line": 4,
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I am on the page 'http://localhost:3000/login'",
+            "match": {
+              "location": "unavailable"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2800000000
+            },
+            "arguments": [],
+            "embeddings": [],
+            "start_time": 1704256749946,
+            "end_time": 1704256752746
+          },
+          {
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ODkwLCJtb2JpbGVfbm8iOm51bGwsImlzX3ZlcmlmaWVkIjpmYWxzZSwiaWF0IjoxNzA0MTc2MzQ0LCJleHAiOjE3MDQ3ODExNDR9.64QaI5pZg0Tma3nESBOfK82_IM2UwHS4o8A_7PM1iEY' in 'authToken' to the local storage",
+            "match": {
+              "location": "unavailable"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            },
+            "arguments": [],
+            "embeddings": [],
+            "start_time": 1704256752746,
+            "end_time": 1704256752753
+          },
+          {
+            "keyword": "And ",
+            "line": 7,
+            "name": "I go to 'http://localhost:3000/user'",
+            "match": {
+              "location": "unavailable"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4141000000
+            },
+            "arguments": [],
+            "embeddings": [],
+            "start_time": 1704256752753,
+            "end_time": 1704256756894
+          },
+          {
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I click the element 'profileMenu'",
+            "match": {
+              "location": "unavailable"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1126000000
+            },
+            "arguments": [],
+            "embeddings": [],
+            "start_time": 1704256756894,
+            "end_time": 1704256758020
+          },
+          {
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should see 'Logout'",
+            "match": {
+              "location": "unavailable"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17000000
+            },
+            "arguments": [],
+            "embeddings": [],
+            "start_time": 1704256758020,
+            "end_time": 1704256758037
+          },
+          {
+            "keyword": "When ",
+            "line": 10,
+            "name": "I click the element 'logout'",
+            "match": {
+              "location": "unavailable"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1084000000
+            },
+            "arguments": [],
+            "embeddings": [],
+            "start_time": 1704256758037,
+            "end_time": 1704256759121
+          },
+          {
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I go to 'http://localhost:3000/login'",
+            "match": {
+              "location": "unavailable"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2930000000
+            },
+            "arguments": [],
+            "embeddings": [],
+            "start_time": 1704256759121,
+            "end_time": 1704256762051
+          }
+        ]
+      }
+    ],
+    "uri": "features/Admin_Portal.feature"
+  }
+]

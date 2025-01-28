@@ -1,0 +1,317 @@
+Feature: Onboarding
+
+    Scenario: User sign up into Prodkt for the first time. Users are required to create a new account with SMS OTP
+        Given I am on the page 'http://localhost:3000/signin'
+        Then I wait for 4 seconds
+        And I click the 'Next'
+        And I click the 'Next'
+        And I click the 'Next'
+        And I click the 'Get Started'
+        Then I should see 'Unlock the power of Prodkt'
+        Then I should see 'Proceed With Whatsapp'
+        Then I should see 'Proceed with Mobile Number'
+        And I click the element 'proceedNumber'
+        Then The element 'getOtp' should be disabled
+        When I type '8072841645' in the 'phoneNumber'
+        Then The element 'getOtp' should be enabled
+        And I click the element 'getOtp'
+        And I wait for 2 seconds
+        Then I should see 'OTP sent successfully'
+        And I wait for 2 seconds
+        When I type '1' in the 'otp1'
+        When I type '2' in the 'otp2'
+        When I type '3' in the 'otp3'
+        When I type '4' in the 'otp4'
+        And I click the element 'getOtp'
+        And I wait for 1 seconds
+        Then I should see 'OTP verified successfully'
+        And I wait for 4 seconds
+        Then The url should be 'http://localhost:3000/tellaboutyourself'
+        And I wait for 2 seconds
+        When I type 'Harry' in the 'name'
+        Then The element 'phoneNumber' should be disabled
+        When I type 'Tambaram' in the 'locality'
+        And I wait for 5 seconds
+        Then I press the key 'ArrowDown'
+        Then I press the key 'Enter'
+        Then I type 'samplehwwn@gmail.com' in the 'emailId'
+        And I click the element 'proceed'
+        And I wait for 4 seconds
+        Then The url should be 'http://localhost:3000/productCategory'
+        And I wait for 3 seconds
+        Then I should see 'What product categories do you own currently?'
+        Then I click the element 'product-0'
+        Then I click the element 'product-1'
+        Then I click the element 'product-6'
+        And I click the element 'proceed'
+        And I wait for 3 seconds
+        Then I should see 'Sign up successful. Loading your personal product space'
+        And I wait for 5 seconds
+
+    Scenario: User should be able to change the phone number
+
+        Given I am on the page 'http://localhost:3000/signin'
+        Then I wait for 4 seconds
+        And I click the 'Next'
+        And I click the 'Next'
+        And I click the 'Next'
+        And I click the 'Get Started'
+        Then I should see 'Unlock the power of Prodkt'
+        Then I should see 'Proceed With Whatsapp'
+        Then I should see 'Proceed with Mobile Number'
+        And I click the element 'proceedNumber'
+        Then The element 'getOtp' should be disabled
+        When I type '8072831645' in the 'phoneNumber'
+        Then The element 'getOtp' should be enabled
+        And I click the element 'getOtp'
+        And I wait for 2 seconds
+        Then I should see 'OTP sent successfully'
+        And I wait for 2 seconds
+        Then I click the element 'editNumber'
+        And I wait for 1 seconds
+        Then I clear the field 'phoneNumber'
+        When I type '8072831643' in the 'phoneNumber'
+        Then The element 'getOtp' should be enabled
+        And I click the element 'getOtp'
+        And I wait for 2 seconds
+        Then I should see 'OTP sent successfully'
+        And I wait for 2 seconds
+        When I type '1' in the 'otp1'
+        When I type '2' in the 'otp2'
+        When I type '3' in the 'otp3'
+        When I type '4' in the 'otp4'
+        And I click the element 'getOtp'
+        And I wait for 1 seconds
+        Then I should see 'OTP verified successfully'
+        And I wait for 4 seconds
+        Then The url should be 'http://localhost:3000/tellaboutyourself'
+        And I wait for 2 seconds
+        When I type 'Harry' in the 'name'
+        Then The element 'phoneNumber' should be disabled
+        When I type 'Tambaram' in the 'locality'
+        And I wait for 5 seconds
+        Then I press the key 'ArrowDown'
+        Then I press the key 'Enter'
+        Then I type 'samplehewwewn@gmail.com' in the 'emailId'
+        And I click the element 'proceed'
+        And I wait for 4 seconds
+        Then The url should be 'http://localhost:3000/productCategory'
+        And I wait for 3 seconds
+        Then I should see 'What product categories do you own currently?'
+        Then I click the element 'product-0'
+        Then I click the element 'product-1'
+        Then I click the element 'product-6'
+        And I click the element 'proceed'
+        And I wait for 3 seconds
+        Then I should see 'Sign up successful. Loading your personal product space'
+        And I wait for 5 seconds
+
+    Scenario: User should not be able to sign up when invalid phone number is typed in the phoneNumber field
+        Given I am on the page 'http://localhost:3000/signin'
+        Then I wait for 4 seconds
+        And I click the 'Next'
+        And I click the 'Next'
+        And I click the 'Next'
+        And I click the 'Get Started'
+        Then I should see 'Unlock the power of Prodkt'
+        Then I should see 'Proceed With Whatsapp'
+        Then I should see 'Proceed with Mobile Number'
+        And I click the element 'proceedNumber'
+        Then The element 'getOtp' should be disabled
+        When I type '123456789' in the 'phoneNumber'
+        Then I should see 'Please enter a valid mobile number'
+
+    Scenario: User should not be able to sign up with a empty 'phoneNumber' field
+        Given I am on the page 'http://localhost:3000/signin'
+        Then I wait for 4 seconds
+        And I click the 'Next'
+        And I click the 'Next'
+        And I click the 'Next'
+        And I click the 'Get Started'
+        Then I should see 'Unlock the power of Prodkt'
+        Then I should see 'Proceed With Whatsapp'
+        Then I should see 'Proceed with Mobile Number'
+        And I click the element 'proceedNumber'
+        Then The element 'getOtp' should be disabled
+
+    Scenario: User should not be able to type characters in the 'phoneNumber' field
+        Given I am on the page 'http://localhost:3000/signin'
+        Then I wait for 4 seconds
+        And I click the 'Next'
+        And I click the 'Next'
+        And I click the 'Next'
+        And I click the 'Get Started'
+        Then I should see 'Unlock the power of Prodkt'
+        Then I should see 'Proceed With Whatsapp'
+        Then I should see 'Proceed with Mobile Number'
+        And I click the element 'proceedNumber'
+        When I type '@' in the 'phoneNumber'
+        Then I dont want to see '@' in the field 'phoneNumber'
+        Then The element 'getOtp' should be disabled
+
+    Scenario: User should not be able to type alphabets in the 'phoneNumber' field
+        Given I am on the page 'http://localhost:3000/signin'
+        Then I wait for 4 seconds
+        And I click the 'Next'
+        And I click the 'Next'
+        And I click the 'Next'
+        And I click the 'Get Started'
+        Then I should see 'Unlock the power of Prodkt'
+        Then I should see 'Proceed With Whatsapp'
+        Then I should see 'Proceed with Mobile Number'
+        And I click the element 'proceedNumber'
+        When I type 'a' in the 'phoneNumber'
+        Then I dont want to see 'a' in the field 'phoneNumber'
+        Then The element 'getOtp' should be disabled
+
+    Scenario: User should not be able to sign up when wrong OTP is typed in the otp field
+        Given I am on the page 'http://localhost:3000/signin'
+        Then I wait for 4 seconds
+        And I click the 'Next'
+        And I click the 'Next'
+        And I click the 'Next'
+        And I click the 'Get Started'
+        Then I should see 'Unlock the power of Prodkt'
+        Then I should see 'Proceed With Whatsapp'
+        Then I should see 'Proceed with Mobile Number'
+        And I click the element 'proceedNumber'
+        Then The element 'getOtp' should be disabled
+        When I type '8072845645' in the 'phoneNumber'
+        Then The element 'getOtp' should be enabled
+        And I click the element 'getOtp'
+        And I wait for 2 seconds
+        Then I should see 'OTP sent successfully'
+        And I wait for 2 seconds
+        When I type '2' in the 'otp1'
+        When I type '2' in the 'otp2'
+        When I type '2' in the 'otp3'
+        When I type '2' in the 'otp4'
+        And I click the element 'getOtp'
+        And I wait for 1 seconds
+        Then I should see 'Given OTP is wrong!'
+
+    Scenario: User should not be able to sign up with an empty otp field
+        Given I am on the page 'http://localhost:3000/signin'
+        Then I wait for 4 seconds
+        And I click the 'Next'
+        And I click the 'Next'
+        And I click the 'Next'
+        And I click the 'Get Started'
+        Then I should see 'Unlock the power of Prodkt'
+        Then I should see 'Proceed With Whatsapp'
+        Then I should see 'Proceed with Mobile Number'
+        And I click the element 'proceedNumber'
+        Then The element 'getOtp' should be disabled
+        When I type '8072845645' in the 'phoneNumber'
+        Then The element 'getOtp' should be enabled
+        And I click the element 'getOtp'
+        And I wait for 2 seconds
+        Then I should see 'OTP sent successfully'
+        And I wait for 2 seconds
+        Then I should see 'Enter the 4 digit code sent to +91 8072845645'
+
+    Scenario: User should not be able to save the 'Tell about yourself' page if any of the mandatory fields are left empty or incorrectly typed.
+        Given I am on the page 'http://localhost:3000/signin'
+        Then I wait for 4 seconds
+        And I click the 'Next'
+        And I click the 'Next'
+        And I click the 'Next'
+        And I click the 'Get Started'
+        Then I should see 'Unlock the power of Prodkt'
+        Then I should see 'Proceed With Whatsapp'
+        Then I should see 'Proceed with Mobile Number'
+        And I click the element 'proceedNumber'
+        Then The element 'getOtp' should be disabled
+        When I type '8672841645' in the 'phoneNumber'
+        Then The element 'getOtp' should be enabled
+        And I click the element 'getOtp'
+        And I wait for 2 seconds
+        Then I should see 'OTP sent successfully'
+        And I wait for 2 seconds
+        When I type '1' in the 'otp1'
+        When I type '2' in the 'otp2'
+        When I type '3' in the 'otp3'
+        When I type '4' in the 'otp4'
+        And I click the element 'getOtp'
+        And I wait for 1 seconds
+        Then I should see 'OTP verified successfully'
+        And I wait for 4 seconds
+        Then The url should be 'http://localhost:3000/tellaboutyourself'
+        And I wait for 2 seconds
+        Then The element 'proceed' should be disabled
+        When I type 'Harry' in the 'name'
+        Then The element 'phoneNumber' should be disabled
+        Then I type 'samplehwwgmail.c' in the 'emailId'
+        When I type 'Tambaram' in the 'locality'
+        And I wait for 5 seconds
+        Then I press the key 'ArrowDown'
+        Then I press the key 'Enter'
+        Then The element 'proceed' should be enabled
+        And I click the element 'proceed'
+        Then I should see 'Please enter the valid mail'
+        Then I clear the field 'emailId'
+        Then I type 'suriyasample@gmail.com' in the 'emailId'
+        And I click the element 'proceed'
+        And I wait for 4 seconds
+        Then The url should be 'http://localhost:3000/productCategory'
+        And I wait for 3 seconds
+        Then I should see 'What product categories do you own currently?'
+        Then I click the element 'product-0'
+        Then I click the element 'product-1'
+        Then I click the element 'product-6'
+        And I click the element 'proceed'
+        And I wait for 3 seconds
+        Then I should see 'Sign up successful. Loading your personal product space'
+        And I wait for 5 seconds
+
+    Scenario: User should not be able to proceed to next page without selecting atleast one product in the Products page
+        Given I am on the page 'http://localhost:3000/signin'
+        Then I wait for 4 seconds
+        And I click the 'Next'
+        And I click the 'Next'
+        And I click the 'Next'
+        And I click the 'Get Started'
+        Then I should see 'Unlock the power of Prodkt'
+        Then I should see 'Proceed With Whatsapp'
+        Then I should see 'Proceed with Mobile Number'
+        And I click the element 'proceedNumber'
+        Then The element 'getOtp' should be disabled
+        When I type '8212841645' in the 'phoneNumber'
+        Then The element 'getOtp' should be enabled
+        And I click the element 'getOtp'
+        And I wait for 2 seconds
+        Then I should see 'OTP sent successfully'
+        And I wait for 2 seconds
+        When I type '1' in the 'otp1'
+        When I type '2' in the 'otp2'
+        When I type '3' in the 'otp3'
+        When I type '4' in the 'otp4'
+        And I click the element 'getOtp'
+        And I wait for 1 seconds
+        Then I should see 'OTP verified successfully'
+        And I wait for 4 seconds
+        Then The url should be 'http://localhost:3000/tellaboutyourself'
+        And I wait for 2 seconds
+        Then The element 'proceed' should be disabled
+        When I type 'Harry' in the 'name'
+        Then The element 'phoneNumber' should be disabled
+        Then I type 'suriyasale@gmail.com' in the 'emailId'
+        When I type 'Tambaram' in the 'locality'
+        And I wait for 5 seconds
+        Then I press the key 'ArrowDown'
+        Then I press the key 'Enter'
+        Then The element 'proceed' should be enabled
+        And I click the element 'proceed'
+        And I wait for 4 seconds
+        Then The url should be 'http://localhost:3000/productCategory'
+        And I wait for 3 seconds
+        Then I should see 'What product categories do you own currently?'
+        Then The element 'proceed' should be disabled
+        Then I click the element 'product-0'
+        Then I click the element 'product-1'
+        Then I click the element 'product-6'
+        Then The element 'proceed' should be enabled
+        And I click the element 'proceed'
+        And I wait for 3 seconds
+        Then I should see 'Sign up successful. Loading your personal product space'
+        And I wait for 5 seconds

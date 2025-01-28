@@ -1,0 +1,157 @@
+Feature: save preferred services
+    As a user, I should be able to save preferred services
+
+    Scenario: As a user, I should be able to save preferred services
+        Given I am on the page 'http://localhost:3000/signin'
+        When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzQ4LCJtb2JpbGVfbm8iOiI5NTE0Nzk3MTk0IiwiaXNfdmVyaWZpZWQiOmZhbHNlLCJpYXQiOjE2OTIyODg3ODAsImV4cCI6MTY5MjM3NTE4MH0.nfnCcCxgjdruC12Sw4yEuIPX34jzp-uRd2PyC-iEmKE' in 'authToken' to the local storage
+        Then I go to 'http://localhost:3000/'
+        Then I wait for 5 seconds
+        And I click the element 'Click to schedule service'
+        Then I wait for the network response 'https://dev-api.prodkt.co/api/v1/schedule_service/products_service_list'
+        Then I should see 'Choose Product'
+        Then I should see 'Mr. Fridge'
+        Then I click the element 'product0'
+        Then I wait for 5 seconds
+        Then I should see 'Choose Service Providers'
+        Then I should see 'Mr. Fridge'
+        And I click the element 'info'
+        Then I should see 'Product Specifications'
+        And I should see 'Serial Number'
+        And I should see 'SN - 9870972'
+        When I click the element 'copy'
+        Then I should see 'Serial Number copied'
+        When I click the element 'closeDrawer'
+        Then I should see 'Service Providers'
+        Then I wait for 2 seconds
+        Then I should see '11 Service Providers available in'
+        And I click the element 'locationDrawer'
+        And I should see 'Select Location'
+        Then I should see 'Your Home Location'
+        And I should see 'Neelankarai, Chennai, Tamil Nadu 600041, India'
+        When I click the element 'Use Current Location'
+        # Then I should see 'Chennai, Chennai, Tamil Nadu' in the 'locality'
+        When I click the element 'closeDrawer'
+        Then I should see 'CJ Home Care - Whirlpool LG Samsung Bosch Siemens IFB Washing Machine Fridge & AC Repair Service Centre in Velachery Chennai'
+        And I should see 'No 1, Nattar St, Ram Nagar, Murugapakkam, Dhandeeswaram, Velachery, Chennai'
+        # And I should see 'Open 24 Hrs'
+        When I click the element 'preferred'
+        Then I wait for 2 seconds
+        Then I should see 'Added preferable Successfully!'
+
+    Scenario: As a user, I should be able to whatsapp of the service provider
+        Given I am on the page 'http://localhost:3000/signin'
+        When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzY4LCJtb2JpbGVfbm8iOiI4Nzc4Nzk0NDI3IiwiaXNfdmVyaWZpZWQiOmZhbHNlLCJpYXQiOjE2OTE0MDk3NTEsImV4cCI6MTY5MTQ5NjE1MX0.zu6GauFiiJH4PnJnCuCys6vxGEKoeNPkvdDnHuLSUkI' in 'authToken' to the local storage
+        Then I go to 'http://localhost:3000/'
+        Then I wait for 5 seconds
+        And I click the element 'Click to schedule service'
+        Then I wait for the network response 'https://dev-api.prodkt.co/api/v1/schedule_service/products_service_list'
+        Then I should see 'Choose Product'
+        Then I should see 'Mr. Fridge'
+        Then I click the element 'product0'
+        Then I wait for 5 seconds
+        Then I should see 'Choose Service Providers'
+        Then I should see 'Service Providers'
+        Then I should see 'CJ Home Care - Whirlpool LG Samsung Bosch Siemens IFB Washing Machine Fridge & AC Repair Service Centre in Velachery Chennai'
+        And I should see 'No 1, Nattar St, Ram Nagar, Murugapakkam, Dhandeeswaram, Velachery, Chennai'
+        # And I should see 'Open 24 Hrs'
+        Then I should see the element 'whatsapp'
+
+
+    Scenario: As a user, I should be able to view working hours of the service provider when I click see working hours
+        Given I am on the page 'http://localhost:3000/signin'
+        When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzY4LCJtb2JpbGVfbm8iOiI4Nzc4Nzk0NDI3IiwiaXNfdmVyaWZpZWQiOmZhbHNlLCJpYXQiOjE2OTE0MDk3NTEsImV4cCI6MTY5MTQ5NjE1MX0.zu6GauFiiJH4PnJnCuCys6vxGEKoeNPkvdDnHuLSUkI' in 'authToken' to the local storage
+        Then I go to 'http://localhost:3000/'
+        Then I wait for 5 seconds
+        And I click the element 'Click to schedule service'
+        Then I wait for the network response 'https://dev-api.prodkt.co/api/v1/schedule_service/products_service_list'
+        Then I should see 'Choose Product'
+        Then I should see 'Mr. Fridge'
+        Then I click the element 'product0'
+        Then I wait for 5 seconds
+        Then I should see 'Choose Service Providers'
+        When I click the element 'See working hours'
+        Then I should see 'Working Hours'
+        Then I should see 'Monday'
+        Then I should see '9 am-5 pm'
+        Then I should see 'Tuesday'
+        Then I should see '9 am-5 pm'
+        Then I should see 'Wednesday'
+        Then I should see '9 am-5 pm'
+        Then I should see 'Friday'
+        Then I should see '9 am-5 pm'
+        Then I should see 'Saturday'
+        Then I should see '9 am-5 pm'
+        Then I should see '(Hours might differ)'
+        Then I should see 'Sunday'
+        # Then I should see 'Closed'
+        Then I click the element 'closeDrawer'
+
+    Scenario: As a user, I should be able to add my primary service providers so that I can choose them directly
+        Given I am on the page 'http://localhost:3000/signin'
+        When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzY4LCJtb2JpbGVfbm8iOiI4Nzc4Nzk0NDI3IiwiaXNfdmVyaWZpZWQiOmZhbHNlLCJpYXQiOjE2OTE0MDk3NTEsImV4cCI6MTY5MTQ5NjE1MX0.zu6GauFiiJH4PnJnCuCys6vxGEKoeNPkvdDnHuLSUkI' in 'authToken' to the local storage
+        Then I go to 'http://localhost:3000/'
+        Then I wait for 5 seconds
+        And I click the element 'Click to schedule service'
+        Then I wait for the network response 'https://dev-api.prodkt.co/api/v1/schedule_service/products_service_list'
+        Then I should see 'Choose Product'
+        Then I should see 'bddTest'
+        Then I click the element 'product2'
+        Then I wait for 5 seconds
+        Then I should see 'Choose Service Providers'
+        Then I should see 'Would you prefer to reach out to your regular service provider?'
+        When I click the element 'Click here to Add'
+        Then I should see 'Add Service Provider Details'
+        Then The element 'addServiceProvider' should be disabled
+        Then I type 'Vishal' in the 'serviceProviderName'
+        And I type '7777777777' in the 'contactNumber1'
+        And I click the element 'addAnotherNumber'
+        Then I type '1111111111' in the 'contactNumber2'
+        Then I type 'Neelankarai' in the 'location'
+        Then I click the element 'Mark as primary service provider'
+        And The element 'addServiceProvider' should be enabled
+        # Then I uncheck the 'Mark as primary service provider'
+        When I click the element 'addServiceProvider'
+        Then I wait for 2 seconds
+        Then I should see 'Added service provider Successfully!'
+        Then I wait for 2 seconds
+        Then I should see 'Primary Service Provider'
+        And I should see 'Vishal'
+        And I should see 'Neelankarai'
+
+    Scenario: As a user, I should be able to view the added primary service provider in the product detail page if service provider was added
+        Given I am on the page 'http://localhost:3000/signin'
+        When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzY4LCJtb2JpbGVfbm8iOiI4Nzc4Nzk0NDI3IiwiaXNfdmVyaWZpZWQiOmZhbHNlLCJpYXQiOjE2OTE0MDk3NTEsImV4cCI6MTY5MTQ5NjE1MX0.zu6GauFiiJH4PnJnCuCys6vxGEKoeNPkvdDnHuLSUkI' in 'authToken' to the local storage
+        Then I go to 'http://localhost:3000/'
+        Then I wait for 5 seconds
+        When I click the element 'product-0'
+        Then I wait for 3 seconds
+        When I click the element 'primaryServiceProvider'
+        Then I should see 'Primary Service Provider'
+        Then I should see 'Vishal'
+        Then I should see 'Neelankarai'
+        And I should see the element 'whatsapp'
+        And I should see the element 'call'
+        When I click the element 'View list of preferred service providers'
+        Then I wait for the network response 'https://dev-api.prodkt.co/api/v1/schedule_service/service_providers'
+        Then I should see 'Primary Service Provider'
+        And I should see 'Preferred Service Providers (1)'
+        Then I should see 'Vishal'
+        And I should see 'Neelankarai'
+
+
+    Scenario: As a user, I should be able to view the Preferable Service Providers from the product detail page
+        Given I am on the page 'http://localhost:3000/signin'
+        When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzY4LCJtb2JpbGVfbm8iOiI4Nzc4Nzk0NDI3IiwiaXNfdmVyaWZpZWQiOmZhbHNlLCJpYXQiOjE2OTE0MDk3NTEsImV4cCI6MTY5MTQ5NjE1MX0.zu6GauFiiJH4PnJnCuCys6vxGEKoeNPkvdDnHuLSUkI' in 'authToken' to the local storage
+        Then I go to 'http://localhost:3000/'
+        Then I wait for 5 seconds
+        When I click the element 'product-0'
+        Then I wait for 3 seconds
+        When I click the element 'more'
+        Then I click the element 'Preferable Service Providers'
+        Then I wait for the network response 'https://dev-api.prodkt.co/api/v1/schedule_service/service_providers'
+        Then I should see 'Primary Service Provider'
+        And I should see 'Preferred Service Providers (1)'
+        Then I should see 'Vishal'
+
+
+

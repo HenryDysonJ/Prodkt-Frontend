@@ -1,0 +1,62 @@
+export const brandDarkTheme = {
+    palette: {
+      mode: 'dark',
+      primary: {
+        light: '#4282E5',
+        main: '#1363DF',
+        dark: '#0D459C',
+        container: '#E0EAF9',
+        onContainer: '#001945',
+        contrastText: '#FFF',
+      },
+      secondary: {
+        light: '#375363',
+        main: '#06283D',
+        dark: '#041C2A',
+        container: '#E6EAEC',
+        onContainer: '#151B2C',
+        contrastText: '#FFF',
+      },
+      tertiary: {
+        light: '#6BC3FF',
+        main: '#47B5FF',
+        dark: '#317EB2',
+        container: '#DAF0FF',
+        onContainer: '#001E31',
+        contrastText: '#FFF',
+      },
+      error: {
+        main: '#DF3813',
+        container: '#FFDAD3',
+        onContainer: '#3D0600',
+        contrastText: '#FFF',
+      },
+      success: {
+        main: '#008545',
+        container: '#CBF2E0',
+        onContainer: '#003D20',
+        contrastText: '#FFF',
+      },
+      warning: {
+        main: '#D17800',
+        container: '#FFDDB8',
+        onContainer: '#2B1700',
+        contrastText: '#FFF',
+      },
+      custom: {
+        surfaceDim: '#E6E8E9',
+        surface: '#F0F3F6',
+        surfaceBright: '#FFFFFF',
+        onSurface: '#02111A',
+        onSurfaceVariant: '#4E585E',
+        onSurfaceVariant2: '#6A7175',
+        onSurfaceContainer: '#9AA0A3',
+        onSurfaceContainer1: '#B3B8BB',
+        outline: '#D9DBDD',
+        outlineVariant: '#E5E8EB',
+        surfaceDisable: '#E6EAEB',
+        onSurfaceDisable: '#656A6E',
+      },
+    },
+  };
+  

@@ -1,0 +1,72 @@
+Feature: Maintenance
+    As a user, I should be able to add Service Record to the added product
+
+    Scenario: As a user, I should be able to add Service Record to the added product in the Maintenance section on the product detail page
+        Given I am on the page 'http://localhost:3000/signin'
+        When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjkyLCJtb2JpbGVfbm8iOiI3ODcxMTI2MTcwIiwiaXNfdmVyaWZpZWQiOmZhbHNlLCJpYXQiOjE2OTEzODg1NzUsImV4cCI6MTY5MTQ3NDk3NX0.kRdm71nZfudPQHUf41QuNX_lhtlbrONHdCeOIsuwkAo' in 'authToken' to the local storage
+        Then I go to 'http://localhost:3000/productDetails/01749f68-1132-4911-8649-7d1cecfe4100'
+        Then I wait for 5 seconds
+        Then I should see 'Maintenance'
+        When I click the 'Maintenance'
+        Then I click the element 'addServiceRecord'
+        And I should see 'Record service Details'
+        When I click the element 'closeDrawer'
+        Then I should see 'Maintenance'
+        When I click the element 'addServiceRecord'
+        Then I should see 'Record service Details'
+        Then The element 'submit' should be disabled
+        Then I should see 'Upload Service Invoice/ Bill'
+        # Then I upload '' to the element 'repair.pdf'
+        Then I type 'Repair' in the 'serviceName'
+        And I click the element 'serviceType'
+        And I type '05-08-2023' in the 'serviceDate'
+        Then I type 'Bajaj' in the 'serviceProvider'
+        Then The element 'submit' should be enabled
+        When I click the element 'submit'
+    # Then I should see 'Submitted'
+
+    Scenario: As a user, I should be able to add Service Record when there’s no record of maintenance to the added product in the Maintenance section on the product detail page
+        Given I am on the page 'http://localhost:3000/signin'
+        When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjkyLCJtb2JpbGVfbm8iOiI3ODcxMTI2MTcwIiwiaXNfdmVyaWZpZWQiOmZhbHNlLCJpYXQiOjE2OTEzODg1NzUsImV4cCI6MTY5MTQ3NDk3NX0.kRdm71nZfudPQHUf41QuNX_lhtlbrONHdCeOIsuwkAo' in 'authToken' to the local storage
+        Then I go to 'http://localhost:3000/productDetails/01749f68-1132-4911-8649-7d1cecfe4100'
+        Then I wait for 5 seconds
+        Then I should see 'Maintenance'
+        When I click the 'Maintenance'
+        Then I click the element 'addServiceRecord'
+        And I should see 'Record service Details'
+        When I click the element 'closeDrawer'
+        Then I should see 'No service record found'
+        Then I should see 'Maintenance'
+        When I click the element 'addServiceRecord'
+        Then I should see 'Record service Details'
+        Then The element 'submit' should be disabled
+        Then I should see 'Upload Service Invoice/ Bill'
+        # Then I upload '' to the element 'repair.pdf'
+        Then I type 'Repair' in the 'serviceName'
+        And I click the element 'serviceType'
+        And I type '05-08-2023' in the 'serviceDate'
+        Then I type 'Bajaj' in the 'serviceProvider'
+        Then The element 'submit' should be enabled
+        When I click the element 'submit'
+    # Then I should see 'Submitted'
+
+    Scenario: As a user, I should be able to view all Service Recorded in the maintenance
+        Given I am on the page 'http://localhost:3000/signin'
+        When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjkyLCJtb2JpbGVfbm8iOiI3ODcxMTI2MTcwIiwiaXNfdmVyaWZpZWQiOmZhbHNlLCJpYXQiOjE2OTEzODg1NzUsImV4cCI6MTY5MTQ3NDk3NX0.kRdm71nZfudPQHUf41QuNX_lhtlbrONHdCeOIsuwkAo' in 'authToken' to the local storage
+        Then I go to 'http://localhost:3000/productDetails/fbbf81e2-1f24-4718-85d5-2910f7f2f0ec'
+        Then I wait for 5 seconds
+        Then I should see 'Maintenance'
+        When I click the 'Maintenance'
+        Then I should see 'See all 1 Services'
+        When I click the element 'seeAllServices'
+        Then The url should be 'http://localhost:3000/serviceHistory'
+        And I wait for 3 seconds
+        Then I should see 'Service History'
+        Then I should see 'Services (1)'
+        And I should see 'Repair'
+        And I should see 'Bajaj'
+        And I should see 'Bajaj'
+        And I should see '3 Aug 2023'
+        Then I should see 'Download'
+        And I click the element 'download'
+# Then I should see 'Downloaded'

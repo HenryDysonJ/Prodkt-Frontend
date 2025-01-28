@@ -1,0 +1,109 @@
+{
+  "name": "prodkt-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "dev:production": "turbo run dev:production --parallel",
+    "dev:staging": "turbo run dev:staging --parallel",
+    "build:development": "turbo run build:development",
+    "build:staging": "turbo run build:staging",
+    "build:storybook": "turbo run build-storybook",
+    "preview": "turbo run preview",
+    "lint": "turbo run lint",
+    "clean:root": "rm -rf node_modules",
+    "clean": "turbo run clean && npm run clean:root ",
+    "plop": "plop",
+    "prepare": "husky install",
+    "commit": "git add . && npx czg",
+    "release-boilerplate": "standard-version",
+    "test:init": "npx playwright@latest install",
+    "test": "npx @crayond_dev/bdd@latest run -f apps/brandApp/src/features -r apps/brandApp/src/reports",
+    "test:dev": "npx @crayond_dev/bdd@latest run -f apps/brandApp/src/featuresDev -r apps/brandApp/src/reports"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
+  "engines": {
+    "node": ">=16.6.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "packageManager": "npm@8.11.0",
+  "devDependencies": {
+    "@playwright/test": "^1.40.1",
+    "@types/aos": "^3.0.4",
+    "@types/emoji-mart": "^3.0.14",
+    "@types/node": "^20.6.2",
+    "@types/react-copy-to-clipboard": "^5.0.4",
+    "@types/react-slick": "^0.23.12",
+    "eslint-config-custom": "*",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
+    "plop": "^3.1.1",
+    "semantic-release": "^20.1.1",
+    "standard-version": "^9.5.0",
+    "turbo": "^1.10.7",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@amplitude/analytics-browser": "^2.2.3",
+    "@crayond_dev/ui_basic-button": "^0.0.5",
+    "@crayond_dev/ui_pagination": "^5.0.1",
+    "@crayond_dev/ui_table": "^4.0.0",
+    "@crayond_dev/ui_time-picker": "^3.0.4",
+    "@crayond_dev/ui_tree-view": "^5.0.0",
+    "@fontsource/sarabun": "^4.5.9",
+    "@mui/icons-material": "^5.11.16",
+    "@phuocng/react-pdf-viewer": "^1.7.0",
+    "@react-pdf-viewer/core": "^3.12.0",
+    "@react-pdf-viewer/default-layout": "^3.12.0",
+    "@react-pdf-viewer/full-screen": "^3.12.0",
+    "@tanstack/react-query": "^4.29.12",
+    "animate.css": "^4.1.1",
+    "animate.css-react": "^1.1.0",
+    "aos": "^2.3.4",
+    "axios": "^1.5.1",
+    "html2canvas": "^1.4.1",
+    "html5-qrcode": "^2.3.8",
+    "latest": "^0.2.0",
+    "material-ui-popup-state": "^5.1.0",
+    "moment": "^2.29.4",
+    "next": "^14.2.3",
+    "pdf-viewer-reactjs": "^2.2.3",
+    "pdfjs-dist": "3.9.179",
+    "react": "^18.2.0",
+    "react-animated-css": "^1.2.1",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-html5-camera-photo": "^1.5.11",
+    "react-joyride": "^2.5.5",
+    "react-otp-input": "^3.0.0",
+    "react-pdf": "^7.1.1",
+    "react-player": "^2.16.0",
+    "react-qr-barcode-scanner": "^1.0.6",
+    "react-quill-emoji": "^0.1.9",
+    "react-share": "^4.4.1",
+    "react-share-social": "^0.1.55",
+    "react-slick": "^0.29.0",
+    "react-webcam": "^7.1.1",
+    "styled-components": "^5.3.9",
+    "underscore": "^1.13.6",
+    "use-long-press": "^3.2.0",
+    "vite-plugin-pwa": "^0.14.7"
+  }
+}

@@ -1,0 +1,446 @@
+Feature: Add Product Manually
+
+    Scenario: As a User, I should be able to add a product and update its details
+
+        Given I am on the page 'http://localhost:3000/signin'
+        When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDU4LCJtb2JpbGVfbm8iOiI4MDcyOTAxNjI4IiwiaXNfdmVyaWZpZWQiOnRydWUsImlhdCI6MTY4NzI0MTg2NSwiZXhwIjoxNjg3MzI4MjY1fQ.WUde_8uYyJpnTgWPJQAiD1Mvkv_sLDjx4l99EdY3vOY' in 'authToken' to the local storage
+        Then I go to 'http://localhost:3000/'
+        Then I wait for 3 seconds
+        When I click the element 'addNewProduct'
+        Then I should see 'Add Product'
+        When I click the element 'searchAdd'
+        Then The url should be 'http://localhost:3000/searchproduct'
+        When I type 'apple' in the 'searchField'
+        Then I wait for 5 seconds
+        Then I should see 'APPLE iPhone 13 128gb starlight'
+        Then I should see 'APPLE iPhone 13 128gb midnight'
+        Then I should see 'APPLE iPhone 13 128gb blue'
+        Then I should see 'APPLE iPhone 11 128gb black'
+        Then I should see 'APPLE iPhone 11 64gb black'
+        When I click the element 'addProduct1'
+        Then I wait for 2 seconds
+        When I click the element 'addProductbutton'
+        Then I wait for 2 seconds
+        Then I should see 'Product Details'
+        Then The element 'next' should be disabled
+        When I type '30-8-2022' in the 'dateOfPurchase'
+        When I type '23sef545' in the 'serialNumber'
+        Then I click the element 'online'
+        Then The element 'next' should be enabled
+        And I click the element 'next'
+        Then I should see 'Warranty, Insurance & AMC'
+        And The element 'next' should be disabled
+        Then I click the element 'warrantyYes0'
+        Then I wait for 1 seconds
+        Then I click the element 'insuranceYes0'
+        And The element 'next' should be enabled
+        And I click the element 'next'
+        Then I should see 'Upload Documents'
+        And I should see 'Standard Warranty Details'
+        When I type '6' in the 'warrantyCoverage'
+        # Then The element 'year' should be read only
+        When I click the element 'months'
+        # When I click the element 'uploadWarrantyDocument'
+        # When I upload 'https://www.learnaws.org/assets/beginners-guide.pdf' to the element 'uploadWarrantyDocument'
+        # Then I should see 'FridgeInsurance.pdf'
+
+        Then I should see 'Insurance Details'
+        Then I type 'Bajaj' in the 'insurerName'
+        Then I type '17032005' in the 'policyNumber'
+        Then I type '30-03-2023' in the 'purchasedOn'
+        When I type '6' in the 'insuranceCoverage'
+        And I click the element 'months'
+        # Then I should see 'AMC Details'
+        # Then I type 'qwe1234' in the 'serialNumber'
+        # And I click the element 'plus'
+        # And  I click the element 'plus'
+        # And I click the element 'plus'
+        # And I click the element 'plus'
+        # And I click the element 'plus'
+        # Then The element 'plus' should be disabled
+        # Then I should see '5' in the  'amcCoverage'
+        Then I should see 'Invoice Document'
+        And I click the 'Proceed'
+        # And I wait for the navigation to complete
+        Then The url should be 'http://localhost:3000/productSummary'
+        Then I wait for 3 seconds
+        And I should see 'Product Details'
+        And I should see 'Warranty, Insurance & AMC'
+        # And I should see 'Documents'
+        When I click the 'Confirm'
+        # And I wait for the navigation to complete
+        Then The url should be 'http://localhost:3000/nickName'
+        Then I wait for 3 seconds
+        Then I should see 'Give your device a quirky nickname!'
+        When I type 'Suriya Mobile' in the 'nickname'
+        And I click the element 'nextArrow'
+        Then I wait for 2 seconds
+        # And I wait for the navigation to complete
+        # Then The url should be 'http://localhost:3000/productaddedsuccessfully'
+        Then I should see 'Suriya Mobile added successfully'
+        Then I should see 'APPLE iPhone 13 (Starlight, 128 GB)'
+        # Then I should see 'Samsung 324L Frost Free Double'
+        # And I wait for the navigation to complete
+        Then I wait for 6 seconds
+        Then I should see 'ensure Suriya Mobile is secured!'
+        And I should see 'AMC'
+        And I should see 'No AMC coverage for this product'
+        And I should see 'Purchase AMC'
+        When I click the element 'down2'
+        Then I should see 'General Maintenance'
+        Then I should see 'Aditya Birla Service'
+        Then I should see 'Aditya Birla Service'
+        And I should see 'Insurance'
+        Then I should see 'Standard Warranty'
+        Then I should see 'Expired'
+        When I click the element 'down2'
+        Then I should see 'General Maintenance'
+        Then I should see 'Aditya Birla Service'
+        Then I should see 'Aditya Birla Service'
+        When I click the element 'homePage'
+    # And I wait for the navigation to complete
+    # Then The url should be 'http://localhost:3000/'
+
+
+        Scenario: User should be able to view where to find the serial number of their products and user should be able to modify the given input.
+
+            Given I am on the page 'http://localhost:3000/signin'
+            When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDU4LCJtb2JpbGVfbm8iOiI4MDcyOTAxNjI4IiwiaXNfdmVyaWZpZWQiOnRydWUsImlhdCI6MTY4NzI0MTg2NSwiZXhwIjoxNjg3MzI4MjY1fQ.WUde_8uYyJpnTgWPJQAiD1Mvkv_sLDjx4l99EdY3vOY' in 'authToken' to the local storage
+            Then I go to 'http://localhost:3000/'
+            Then I wait for 3 seconds
+            When I click the element 'addNewProduct'
+            Then I should see 'Add Product'
+            When I click the element 'searchAdd'
+            Then The url should be 'http://localhost:3000/searchproduct'
+            When I type 'apple' in the 'searchField'
+            Then I wait for 5 seconds
+            Then I should see 'APPLE iPhone 13 128gb starlight'
+            Then I should see 'APPLE iPhone 13 128gb midnight'
+            Then I should see 'APPLE iPhone 13 128gb blue'
+            Then I should see 'APPLE iPhone 11 128gb black'
+            Then I should see 'APPLE iPhone 11 64gb black'
+            When I click the element 'addProduct1'
+            Then I wait for 2 seconds
+            When I click the element 'addProductbutton'
+            Then I wait for 2 seconds
+            Then I should see 'Product Details'
+            Then The element 'next' should be disabled
+            When I type '30-8-2022' in the 'dateOfPurchase'
+            And I click the element 'findTheSerialNumber'
+            Then I wait for 3 seconds
+            Then I should see 'IMEI is a 15 digit unique number specific to your phone. You can find your IMEI number from your settings application or by dialing *#06# from the dialer app'
+            And I click the element 'closeDrawer'
+            When I type '23sef545' in the 'serialNumber'
+            Then I click the element 'online'
+            Then The element 'next' should be enabled
+            And I click the element 'next'
+            Then I should see 'Warranty, Insurance & AMC'
+            And The element 'next' should be disabled
+            Then I click the element 'warrantyYes0'
+            Then I wait for 1 seconds
+            Then I click the element 'insuranceYes0'
+            And The element 'next' should be enabled
+            And I click the element 'next'
+            Then I should see 'Upload Documents'
+            And I should see 'Standard Warranty Details'
+            When I type '6' in the 'warrantyCoverage'
+            # Then The element 'year' should be read only
+            When I click the element 'months'
+            # When I click the element 'uploadWarrantyDocument'
+            # When I upload 'https://www.learnaws.org/assets/beginners-guide.pdf' to the element 'uploadWarrantyDocument'
+            # Then I should see 'FridgeInsurance.pdf'
+
+            Then I should see 'Insurance Details'
+            Then I type 'Bajaj' in the 'insurerName'
+            Then I type '17032005' in the 'policyNumber'
+            Then I type '30-03-2023' in the 'purchasedOn'
+            When I type '6' in the 'insuranceCoverage'
+            And I click the element 'months'
+            # Then I should see 'AMC Details'
+            # Then I type 'qwe1234' in the 'serialNumber'
+            # And I click the element 'plus'
+            # And  I click the element 'plus'
+            # And I click the element 'plus'
+            # And I click the element 'plus'
+            # And I click the element 'plus'
+            # Then The element 'plus' should be disabled
+            # Then I should see '5' in the  'amcCoverage'
+            Then I should see 'Invoice Document'
+            And I click the 'Proceed'
+            # And I wait for the navigation to complete
+            Then The url should be 'http://localhost:3000/productSummary'
+            Then I wait for 3 seconds
+            And I should see 'Product Details'
+            And I should see 'Warranty, Insurance & AMC'
+            # And I should see 'Documents'
+            When I click the 'Confirm'
+            # And I wait for the navigation to complete
+            Then The url should be 'http://localhost:3000/nickName'
+            Then I wait for 3 seconds
+            Then I should see 'Give your device a quirky nickname!'
+            When I type 'Suriya Mobile' in the 'nickname'
+            And I click the element 'nextArrow'
+            Then I wait for 2 seconds
+            # And I wait for the navigation to complete
+            # Then The url should be 'http://localhost:3000/productaddedsuccessfully'
+            Then I should see 'Suriya Mobile added successfully'
+            Then I should see 'APPLE iPhone 13 (Starlight, 128 GB)'
+            # Then I should see 'Samsung 324L Frost Free Double'
+            # And I wait for the navigation to complete
+            Then I wait for 6 seconds
+            Then I should see 'ensure Suriya Mobile is secured!'
+            And I should see 'AMC'
+            And I should see 'No AMC coverage for this product'
+            And I should see 'Purchase AMC'
+            When I click the element 'down2'
+            Then I should see 'General Maintenance'
+            Then I should see 'Aditya Birla Service'
+            Then I should see 'Aditya Birla Service'
+            And I should see 'Insurance'
+            Then I should see 'Standard Warranty'
+            Then I should see 'Expired'
+            When I click the element 'down2'
+            Then I should see 'General Maintenance'
+            Then I should see 'Aditya Birla Service'
+            Then I should see 'Aditya Birla Service'
+            When I click the element 'homePage'
+    # And I wait for the navigation to complete
+    # Then The url should be 'http://localhost:3000/'
+
+
+    Scenario: As a User, I should be to add products from the 'Products to be added' section in homepage
+
+        Given I am on the page 'http://localhost:3000/signin'
+        When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDU4LCJtb2JpbGVfbm8iOiI4MDcyOTAxNjI4IiwiaXNfdmVyaWZpZWQiOnRydWUsImlhdCI6MTY4NzI0MTg2NSwiZXhwIjoxNjg3MzI4MjY1fQ.WUde_8uYyJpnTgWPJQAiD1Mvkv_sLDjx4l99EdY3vOY' in 'authToken' to the local storage
+        Then I go to 'http://localhost:3000/'
+        Then I wait for 5 seconds
+        Then I should see 'Products To Be Added'
+        When I click the element 'click-0'
+        Then I should see 'Add Product'
+        When I click the element 'searchAdd'
+        Then The url should be 'http://localhost:3000/searchproduct'
+        When I type 'apple' in the 'searchField'
+        Then I wait for 5 seconds
+        Then I should see 'APPLE iPhone 13 128gb starlight'
+        Then I should see 'APPLE iPhone 13 128gb midnight'
+        Then I should see 'APPLE iPhone 13 128gb blue'
+        Then I should see 'APPLE iPhone 11 128gb black'
+        Then I should see 'APPLE iPhone 11 64gb black'
+        When I click the element 'addProduct1'
+        Then I wait for 2 seconds
+        When I click the element 'addProductbutton'
+        Then I wait for 2 seconds
+        Then I should see 'Product Details'
+        Then The element 'next' should be disabled
+        When I type '30-8-2022' in the 'dateOfPurchase'
+        And I click the element 'findTheSerialNumber'
+        Then I wait for 3 seconds
+        Then I should see 'IMEI is a 15 digit unique number specific to your phone. You can find your IMEI number from your settings application or by dialing *#06# from the dialer app'
+        And I click the element 'closeDrawer'
+        When I type '23sef545' in the 'serialNumber'
+        Then I click the element 'online'
+        Then The element 'next' should be enabled
+        And I click the element 'next'
+        Then I should see 'Warranty, Insurance & AMC'
+        And The element 'next' should be disabled
+        Then I click the element 'warrantyYes0'
+        Then I wait for 1 seconds
+        Then I click the element 'insuranceYes0'
+        And The element 'next' should be enabled
+        And I click the element 'next'
+        Then I should see 'Upload Documents'
+        And I should see 'Standard Warranty Details'
+        When I type '6' in the 'warrantyCoverage'
+        # Then The element 'year' should be read only
+        When I click the element 'months'
+        # When I click the element 'uploadWarrantyDocument'
+        # When I upload 'https://www.learnaws.org/assets/beginners-guide.pdf' to the element 'uploadWarrantyDocument'
+        # Then I should see 'FridgeInsurance.pdf'
+
+        Then I should see 'Insurance Details'
+        Then I type 'Bajaj' in the 'insurerName'
+        Then I type '17032005' in the 'policyNumber'
+        Then I type '30-03-2023' in the 'purchasedOn'
+        When I type '6' in the 'insuranceCoverage'
+        And I click the element 'months'
+        # Then I should see 'AMC Details'
+        # Then I type 'qwe1234' in the 'serialNumber'
+        # And I click the element 'plus'
+        # And  I click the element 'plus'
+        # And I click the element 'plus'
+        # And I click the element 'plus'
+        # And I click the element 'plus'
+        # Then The element 'plus' should be disabled
+        # Then I should see '5' in the  'amcCoverage'
+        Then I should see 'Invoice Document'
+        And I click the 'Proceed'
+        # And I wait for the navigation to complete
+        Then The url should be 'http://localhost:3000/productSummary'
+        Then I wait for 3 seconds
+        And I should see 'Product Details'
+        And I should see 'Warranty, Insurance & AMC'
+        # And I should see 'Documents'
+        When I click the 'Confirm'
+        # And I wait for the navigation to complete
+        Then The url should be 'http://localhost:3000/nickName'
+        Then I wait for 3 seconds
+        Then I should see 'Give your device a quirky nickname!'
+        When I type 'Suriya Mobile' in the 'nickname'
+        And I click the element 'nextArrow'
+        Then I wait for 2 seconds
+        # And I wait for the navigation to complete
+        # Then The url should be 'http://localhost:3000/productaddedsuccessfully'
+        Then I should see 'Suriya Mobile added successfully'
+        Then I should see 'APPLE iPhone 13 (Starlight, 128 GB)'
+        # Then I should see 'Samsung 324L Frost Free Double'
+        # And I wait for the navigation to complete
+        Then I wait for 6 seconds
+        Then I should see 'ensure Suriya Mobile is secured!'
+        And I should see 'AMC'
+        And I should see 'No AMC coverage for this product'
+        And I should see 'Purchase AMC'
+        When I click the element 'down2'
+        Then I should see 'General Maintenance'
+        Then I should see 'Aditya Birla Service'
+        Then I should see 'Aditya Birla Service'
+        And I should see 'Insurance'
+        Then I should see 'Standard Warranty'
+        Then I should see 'Expired'
+        When I click the element 'down2'
+        Then I should see 'General Maintenance'
+        Then I should see 'Aditya Birla Service'
+        Then I should see 'Aditya Birla Service'
+        When I click the element 'homePage'
+    # And I wait for the navigation to complete
+    # Then The url should be 'http://localhost:3000/'
+
+    Scenario: As a User, I should not be able to go to next section without completing 'product details' section
+        Given I am on the page 'http://localhost:3000/signin'
+        When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDU4LCJtb2JpbGVfbm8iOiI4MDcyOTAxNjI4IiwiaXNfdmVyaWZpZWQiOnRydWUsImlhdCI6MTY4NzI0MTg2NSwiZXhwIjoxNjg3MzI4MjY1fQ.WUde_8uYyJpnTgWPJQAiD1Mvkv_sLDjx4l99EdY3vOY' in 'authToken' to the local storage
+        Then I go to 'http://localhost:3000/'
+        Then I wait for 5 seconds
+        Then I should see 'Products To Be Added'
+        When I click the element 'click-0'
+        Then I should see 'Add Product'
+        When I click the element 'searchAdd'
+        Then The url should be 'http://localhost:3000/searchproduct'
+        When I type 'apple' in the 'searchField'
+        Then I wait for 5 seconds
+        Then I should see 'APPLE iPhone 13 128gb starlight'
+        Then I should see 'APPLE iPhone 13 128gb midnight'
+        Then I should see 'APPLE iPhone 13 128gb blue'
+        Then I should see 'APPLE iPhone 11 128gb black'
+        Then I should see 'APPLE iPhone 11 64gb black'
+        When I click the element 'addProduct1'
+        Then I wait for 2 seconds
+        When I click the element 'addProductbutton'
+        Then I wait for 2 seconds
+        Then I should see 'Product Details'
+        Then The element 'next' should be disabled
+        Then I should see 'Date Of Purchase'
+        Then I should see 'Number'
+        Then I should see 'Mode of Purchase'
+
+    Scenario: As a User, I should not be able to type '0' in the months/years field for warranty/insurance/AMC coverage
+
+
+        Given I am on the page 'http://localhost:3000/signin'
+        When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDU4LCJtb2JpbGVfbm8iOiI4MDcyOTAxNjI4IiwiaXNfdmVyaWZpZWQiOnRydWUsImlhdCI6MTY4NzI0MTg2NSwiZXhwIjoxNjg3MzI4MjY1fQ.WUde_8uYyJpnTgWPJQAiD1Mvkv_sLDjx4l99EdY3vOY' in 'authToken' to the local storage
+        Then I go to 'http://localhost:3000/'
+        Then I wait for 3 seconds
+        When I click the element 'addNewProduct'
+        Then I should see 'Add Product'
+        When I click the element 'searchAdd'
+        Then The url should be 'http://localhost:3000/searchproduct'
+        When I type 'apple' in the 'searchField'
+        Then I wait for 5 seconds
+        Then I should see 'APPLE iPhone 13 128gb starlight'
+        Then I should see 'APPLE iPhone 13 128gb midnight'
+        Then I should see 'APPLE iPhone 13 128gb blue'
+        Then I should see 'APPLE iPhone 11 128gb black'
+        Then I should see 'APPLE iPhone 11 64gb black'
+        When I click the element 'addProduct1'
+        Then I wait for 2 seconds
+        When I click the element 'addProductbutton'
+        Then I wait for 2 seconds
+        Then I should see 'Product Details'
+        Then The element 'next' should be disabled
+        When I type '30-8-2022' in the 'dateOfPurchase'
+        When I type '23sef545' in the 'serialNumber'
+        Then I click the element 'online'
+        Then The element 'next' should be enabled
+        And I click the element 'next'
+        Then I should see 'Warranty, Insurance & AMC'
+        And The element 'next' should be disabled
+        Then I click the element 'warrantyYes0'
+        Then I wait for 2 seconds
+        Then I click the element 'insuranceYes0'
+        And The element 'next' should be enabled
+        And I click the element 'next'
+        Then I should see 'Upload Documents'
+        And I should see 'Standard Warranty Details'
+        Then I dont want to see '0' in the field 'warrantyCoverage'
+        # When I type '0' in the element 'warrantyCoverage'
+        # Then I should see 'The minimum value should be 1'
+        When I type '6' in the 'warrantyCoverage'
+        # Then The element 'year' should be read only
+        When I click the element 'months'
+        # When I click the element 'uploadWarrantyDocument'
+        # When I upload 'https://www.learnaws.org/assets/beginners-guide.pdf' to the element 'uploadWarrantyDocument'
+        # Then I should see 'FridgeInsurance.pdf'
+        Then I should see 'Insurance Details'
+        Then I type 'Bajaj' in the 'insurerName'
+        Then I type '17032005' in the 'policyNumber'
+        Then I type '30-03-2023' in the 'purchasedOn'
+        When I type '6' in the 'insuranceCoverage'
+        And I click the element 'months'
+        # Then I should see 'AMC Details'
+        # Then I type 'qwe1234' in the 'serialNumber'
+        # And I click the element 'plus'
+        # And  I click the element 'plus'
+        # And I click the element 'plus'
+        # And I click the element 'plus'
+        # And I click the element 'plus'
+        # Then The element 'plus' should be disabled
+        # Then I should see '5' in the  'amcCoverage'
+        Then I should see 'Invoice Document'
+        And I click the 'Proceed'
+        # And I wait for the navigation to complete
+        Then The url should be 'http://localhost:3000/productSummary'
+        Then I wait for 3 seconds
+        And I should see 'Product Details'
+        And I should see 'Warranty, Insurance & AMC'
+        # And I should see 'Documents'
+        When I click the 'Confirm'
+        # And I wait for the navigation to complete
+        Then The url should be 'http://localhost:3000/nickName'
+        Then I wait for 3 seconds
+        Then I should see 'Give your device a quirky nickname!'
+        When I type 'Suriya Mobile' in the 'nickname'
+        And I click the element 'nextArrow'
+        Then I wait for 2 seconds
+        # And I wait for the navigation to complete
+        # Then The url should be 'http://localhost:3000/productaddedsuccessfully'
+        Then I should see 'Suriya Mobile added successfully'
+        Then I should see 'APPLE iPhone 13 (Starlight, 128 GB)'
+        # Then I should see 'Samsung 324L Frost Free Double'
+        # And I wait for the navigation to complete
+        Then I wait for 6 seconds
+        Then I should see 'ensure Suriya Mobile is secured!'
+        And I should see 'AMC'
+        And I should see 'No AMC coverage for this product'
+        And I should see 'Purchase AMC'
+        When I click the element 'down2'
+        Then I should see 'General Maintenance'
+        Then I should see 'Aditya Birla Service'
+        Then I should see 'Aditya Birla Service'
+        And I should see 'Insurance'
+        Then I should see 'Standard Warranty'
+        Then I should see 'Expired'
+        When I click the element 'down2'
+        Then I should see 'General Maintenance'
+        Then I should see 'Aditya Birla Service'
+        Then I should see 'Aditya Birla Service'
+        When I click the element 'homePage'
+# And I wait for the navigation to complete
+# Then The url should be 'http://localhost:3000/'

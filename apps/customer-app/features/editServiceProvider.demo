@@ -1,0 +1,56 @@
+Feature: Edit Service Provider Details
+    As a user, I should be able to Edit Service Provider Details
+
+    Scenario: As a user, I should be able to Edit Service Provider Details
+        Given I am on the page 'http://localhost:3000/signin'
+        When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzQ4LCJtb2JpbGVfbm8iOiI5NTE0Nzk3MTk0IiwiaXNfdmVyaWZpZWQiOmZhbHNlLCJpYXQiOjE2OTIyODg3ODAsImV4cCI6MTY5MjM3NTE4MH0.nfnCcCxgjdruC12Sw4yEuIPX34jzp-uRd2PyC-iEmKE' in 'authToken' to the local storage
+        Then I go to 'http://localhost:3000/'
+        Then I wait for 8 seconds
+        Then I should see 'My Products'
+        Then I should see 'Romba Tierd ahh na Mobile'
+        When I click the element 'product-0'
+        Then I wait for 8 seconds
+        When I click the element 'more'
+        When I click the element 'ManageServiceProvider'
+        Then I wait for 5 seconds
+        When I click the 'Edit'
+        Then I wait for 5 seconds
+        Then I should see 'Edit Service Provider Details'
+        Then I clear the field 'serviceProviderName'
+        Then I type 'Thilak' in the 'serviceProviderName'
+        Then I clear the field 'contactNumber1'
+        Then I type '9514797194' in the 'contactNumber1'
+        Then I should see '9514797194' in the field 'contactNumber1'
+        Then I clear the field 'location'
+        Then I type 'Neelankarai' in the 'location'
+        Then I should see 'Neelankarai' in the field 'location'
+        When I click the element 'addServiceProvider'
+        Then I wait for 2 seconds
+        Then I should see 'Preferred service provider updated successfully!'
+
+    Scenario: As a user, I should be able to manage service providers
+        Given I am on the page 'http://localhost:3000/signin'
+        When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzQ4LCJtb2JpbGVfbm8iOiI5NTE0Nzk3MTk0IiwiaXNfdmVyaWZpZWQiOmZhbHNlLCJpYXQiOjE2OTIyODg3ODAsImV4cCI6MTY5MjM3NTE4MH0.nfnCcCxgjdruC12Sw4yEuIPX34jzp-uRd2PyC-iEmKE' in 'authToken' to the local storage
+        Then I go to 'http://localhost:3000/'
+        Then I wait for 8 seconds
+        Then I should see 'My Products'
+        When I click the element 'product-0'
+        Then I wait for 8 seconds
+        When I click the element 'more'
+        When I click the element 'ManageServiceProvider'
+        Then I wait for 5 seconds
+
+
+    Scenario: As a user, I should be able to change preferred service provider to primary service provider and the previous primary service provider should not be shown
+        Given I am on the page 'http://localhost:3000/signin'
+        When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzQ4LCJtb2JpbGVfbm8iOiI5NTE0Nzk3MTk0IiwiaXNfdmVyaWZpZWQiOmZhbHNlLCJpYXQiOjE2OTIyODg3ODAsImV4cCI6MTY5MjM3NTE4MH0.nfnCcCxgjdruC12Sw4yEuIPX34jzp-uRd2PyC-iEmKE' in 'authToken' to the local storage
+        Then I go to 'http://localhost:3000/'
+        Then I wait for 8 seconds
+        Then I should see 'My Products'
+        When I click the element 'product-0'
+        Then I wait for 5 seconds
+        When I click the element 'Click to schedule service'
+        Then I wait for 5 seconds
+        Then I should see 'Manage'
+        When I click the element 'manage'
+        Then I wait for 5 seconds

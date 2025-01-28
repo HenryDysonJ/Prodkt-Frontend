@@ -1,0 +1,12 @@
+.TABLE {
+    padding-bottom: 20px;
+  }
+  
+  .TABLE_BOX {
+    padding: 0px !important;
+  }
+  
+  .TABLE_PAPER + div {
+    height: 0 !important;
+  }
+  

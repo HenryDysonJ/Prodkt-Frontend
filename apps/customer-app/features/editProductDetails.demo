@@ -1,0 +1,23 @@
+Feature: Update Details
+    User should be able to edit product details
+
+
+    Scenario: User should be able to edit product details
+        Given I am on the page 'http://localhost:3000/signin'
+        When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjEzLCJtb2JpbGVfbm8iOiI5MDQyMTIxMjE1IiwiaXNfdmVyaWZpZWQiOmZhbHNlLCJpYXQiOjE2ODkxMzk1ODQsImV4cCI6MTY4OTIyNTk4NH0.B11-1PptZVEeibyMtJdrrSahSGhFmVxxmZDGMmoM5W0' in 'authToken' to the local storage
+        Then I go to 'http://localhost:3000/'
+        Then I wait for 5 seconds
+        When I click the element 'product-0'
+        Then I wait for 5 seconds
+        When I click the element 'more'
+        When I click the element 'editDetails'
+        Then I wait for 3 seconds
+        Then I should see 'Edit Product Details'
+        Then I wait for 3 seconds
+        Then I clear the field 'nickName1'
+        Then I type 'New Fridge' in the 'nickName1'
+        Then I clear the field 'dateOfPurchase1'
+        When I type '05-11-2022' in the 'dateOfPurchase1'
+        Then The element 'serialNumber' should be read only
+        Then I click the element 'online'
+        When I click the 'Update'

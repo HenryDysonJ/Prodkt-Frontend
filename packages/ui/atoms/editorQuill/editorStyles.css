@@ -1,0 +1,16 @@
+.custom-quill {
+  background-color: #fff;
+  border-radius: 8px;
+  border-color: #d9dbdd;
+  height: 110px;
+}
+
+.custom-quill .ql-toolbar.ql-snow {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.custom-quill .ql-toolbar.ql-snow + .ql-container.ql-snow {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}

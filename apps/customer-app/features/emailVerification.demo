@@ -1,0 +1,34 @@
+Feature: Email Verification
+    As a user, I should be able to verify my email address in the Profile page
+
+    Scenario: As a user, I should be able to verify my email address in the Profile page
+        Given I am on the page 'www.prodkt.com'
+        When I set the auth token '' in '' to the local storage
+        Then I go to 'www.prodkt.com/profile'
+        Then I should see 'Jessie Pinkman'
+        Then I should see 'Edit Profile'
+        Then I should see 'Mobile Number'
+        And I should see 'Email'
+        When I click the 'Verify'
+        Then I should see 'Email Verfication'
+        Then the element 'verifyOtp' should disabled
+        Then the element 'otp1' should disabled
+        Then the element 'otp2' should disabled
+        Then the element 'otp3' should disabled
+        Then the element 'otp4' should disabled
+        Then I should see 'Verify your email to get instant updates on your products'
+        And I should see 'Enter the 4 digit code sent to'
+        When I click the 'Send OTP'
+        Then I should see 'OTP sent'
+        Then the element 'verifyOtp' should disabled
+        Then the element 'otp1' should enabled
+        Then the element 'otp2' should enabled
+        Then the element 'otp3' should enabled
+        Then the element 'otp4' should enabled
+        Then I type '1' in the 'otp1'
+        Then I type '2' in the 'otp2'
+        Then I type '3' in the 'otp3'
+        Then I type '4' in the 'otp4'
+        Then the element 'verifyOtp' should be enabled
+        When I click the 'Verify OTP'
+        Then I should see 'Verified'

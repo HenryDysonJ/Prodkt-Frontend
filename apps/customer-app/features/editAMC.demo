@@ -1,0 +1,217 @@
+# Feature: Update Details
+# 	As a user, I should be able to update details of Warranty, Insurance & AMC
+
+# 	Scenario: As a user, I should be able to complete & update AMC details from the added product’s Warranty, Insurance & AMC section
+# 		Given I am on the page 'http://localhost:3000/signin'
+# 			When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcsIm1vYmlsZV9ubyI6Ijc5MDQ5NTY0MjAiLCJpc192ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNjg3MTU0Njc0LCJleHAiOjE2ODcyNDEwNzR9.Iw18HiDIUms_Uii2C03YLuyTbGD-JvDd1FlXODmLIHc' in 'authToken' to the local storage
+# 		Given I am on the page 'http://localhost:3000'
+# 		Then I wait for 3 seconds
+# 		When I click the element 'product-4'
+# 		Then I wait for 3 seconds
+# 		Then I should see 'Warranty, Insurance & AMC'
+# 	  Then I should see 'Update Insurance Details'
+# 		Then I should see 'Update details for Insurance to keep your product in track'
+# 		Then I wait for 3 seconds
+# 		When I click the element 'updateDetails1'
+# 		Then I wait for 3 seconds
+# 		Then I should see 'Update Insurance Details'
+# 		When I click the element 'updateManually'
+# 		Then I should see 'Update Insurance Details'
+# 		Then I type 'Aditya Birla ' in the 'insurerName'
+#         Then I type 'qwe1234' in the 'policyNumber'
+#         Then I type '30-03-2023' in the 'purchasedOn'
+#         When I type '12' in the 'insuranceCoverage'
+#         # Then The element 'year' should be read only
+#         And I click the element 'months'
+# 		Then I should see 'Upload Insurance Document'	
+# 		# When I click the element 'uploadDocumentLabel'
+# 		# Then I wait for 3 seconds
+#         # When I upload 'http://localhost:3000/favicon-16x16.png' to the 'uploadDocument'
+# 		# Then I should see 'FridgeInsurance.pdf'
+# 		 When I click the 'Update'
+# 		 Then I should see 'Warranty, Insurance & AMC'
+
+
+# Feature: Update Details
+# 	As a user, I should be able to update details of Warranty, Insurance & AMC
+
+# 	Scenario: As a user, I should be able to complete & update Insurance details from the added product’s Warranty, Insurance & AMC section
+# 				Given I am on the page 'http://localhost:3000/signin'
+# 			When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcsIm1vYmlsZV9ubyI6Ijc5MDQ5NTY0MjAiLCJpc192ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNjg3MTU0Njc0LCJleHAiOjE2ODcyNDEwNzR9.Iw18HiDIUms_Uii2C03YLuyTbGD-JvDd1FlXODmLIHc' in 'authToken' to the local storage
+# 		Given I am on the page 'http://localhost:3000'
+# 		Then I wait for 3 seconds
+# 		When I click the element 'product-2'
+# 		Then I wait for 3 seconds
+# 		Then I should see 'Warranty, Insurance & AMC'
+# 		 Then I should see 'Expiring On 20 Sep 23'
+# 	  Then I should see 'Update Insurance Details'
+# 		Then I should see 'Update details for Insurance to keep your product in track'
+# 		Then I wait for 3 seconds
+# 		When I click the element 'updateDetails1'
+# 		Then I wait for 3 seconds
+# 		Then I should see 'Update Insurance Details'
+# 		When I click the element 'updateManually'
+# 		Then I should see 'Update Insurance Details'
+# 		Then I type 'Aditya Birla ' in the 'insurerName'
+#         Then I type 'qwe1234' in the 'policyNumber'
+#         Then I type '30-03-2023' in the 'purchasedOn'
+#         When I type '12' in the 'insuranceCoverage'
+#         # Then The element 'year' should be read only
+#         And I click the element 'months'
+# 		# Then I should see 'Upload Insurance Document'	
+# 		#  Then I should see 'FridgeInsurance.pdf'
+#         #  And I click the element 'closeDrawer'
+# 		# Then I should see 'Click to browse and upload'
+#         #  When I upload 'https://www.learnaws.org/assets/beginners-guide.pdf' to the element 'uploadDocument'
+# 		#  When I click the 'Update'
+# 		 Then I should see 'Warranty, Insurance & AMC'
+
+# Feature: Update Details
+# 	As a user, I should be able to complete & update details of Warranty, Insurance & AMC
+
+# 	Scenario: As a user, I should be able to update that the registered product has no Insurance
+		
+# 				Given I am on the page 'http://localhost:3000/signin'
+# 			When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcsIm1vYmlsZV9ubyI6Ijc5MDQ5NTY0MjAiLCJpc192ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNjg3MTU0Njc0LCJleHAiOjE2ODcyNDEwNzR9.Iw18HiDIUms_Uii2C03YLuyTbGD-JvDd1FlXODmLIHc' in 'authToken' to the local storage
+# 		Given I am on the page 'http://localhost:3000'
+# 		Then I wait for 3 seconds
+# 		When I click the element 'product-2'
+# 		Then I wait for 3 seconds
+# 		Then I should see 'Warranty, Insurance & AMC'
+# 		Then I should see 'Update Insurance Details'
+# 		Then I should see 'Update details for Insurance to keep your product in track'
+# 		When I click the element 'updateDetails1'
+# 		Then I should see 'Update Insurance Details'
+#                       When I click the element 'drawerCheck'
+#                       Then I click the 'Update'
+# 		Then I should see 'Warranty, Insurance & AMC'
+
+# Warranty 
+# Feature: Update Details
+# 	As a user, I should be able to update details of Warranty, Insurance & AMC
+
+# 	Scenario: As a user, I should be able to update Warranty details from the added product’s Warranty, Insurance & AMC section
+		
+# 		Given I am on the page 'http://localhost:3000/signin'
+# 		When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcsIm1vYmlsZV9ubyI6Ijc5MDQ5NTY0MjAiLCJpc192ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNjg3MTU0Njc0LCJleHAiOjE2ODcyNDEwNzR9.Iw18HiDIUms_Uii2C03YLuyTbGD-JvDd1FlXODmLIHc' in 'authToken' to the local storage
+# 		Given I am on the page 'http://localhost:3000'
+# 		Then I wait for 3 seconds
+# 		When I click the element 'product-6'
+# 		Then I wait for 3 seconds
+# 		Then I should see 'Warranty, Insurance & AMC'
+# 		When I click the element 'updateDetails0'
+# 		Then I should see 'Update Warranty Details'
+# 		When I click the element 'updateManually'
+# 		Then I should see 'Update Warranty Details'
+# 		Then I clear the field 'warrantyCoverage'
+#         When I type '12' in the 'warrantyCoverage'
+#         # Then The element 'year' should be read only
+
+#         And I click the element 'months'
+# 		Then I should see 'Upload Warranty Document'
+# 		 When I click the 'Update'
+#         # When I upload 'https://www.learnaws.org/assets/beginners-guide.pdf' to the element 'warrantyUpdate'
+# 		#  Then I should see 'FridgeWarranty.pdf'
+# 		#   When I click the 'Update'
+# 		Then I should see 'Warranty, Insurance & AMC'
+
+# Feature: Update Details
+# 	As a user, I should be able to update details of Warranty, Insurance & AMC
+
+# 	Scenario: As a user, I should be able to complete & update Warranty details from the added product’s Warranty, Insurance & AMC section
+# 				Given I am on the page 'http://localhost:3000/signin'
+# 		When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcsIm1vYmlsZV9ubyI6Ijc5MDQ5NTY0MjAiLCJpc192ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNjg3MTU0Njc0LCJleHAiOjE2ODcyNDEwNzR9.Iw18HiDIUms_Uii2C03YLuyTbGD-JvDd1FlXODmLIHc' in 'authToken' to the local storage
+# 		Given I am on the page 'http://localhost:3000'
+# 		Then I wait for 3 seconds
+# 		When I click the element 'product-6'
+# 		Then I wait for 3 seconds
+# 		Then I should see 'Warranty, Insurance & AMC'
+# 	           Then I should see 'Expiring On 20 Jun 24'
+# 		When I click the element 'updateDetails0'
+# 		Then I should see 'Update Warranty Details'
+# 		When I click the element 'updateManually'
+# 		Then I should see 'Update Warranty Details'
+# 		Then I clear the field 'warrantyCoverage'
+#         When I type '12' in the 'warrantyCoverage'
+#         # Then The element 'year' should be read only
+#         And I click the element 'months'
+# 		Then I should see 'Upload Warranty Document'
+# 		#  Then I should see 'FridgeWarranty.pdf'
+# 		  When I click the 'Update'
+# 		Then I should see 'Warranty, Insurance & AMC'
+
+# Feature: Update Details
+# 	As a user, I should be able to update details of Warranty, Insurance & AMC
+
+# 	Scenario: As a user, I should be able to update Extended Warranty details from the added product’s Warranty, Insurance & AMC section
+		# 		Given I am on the page 'http://localhost:3000/signin'
+		# When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcsIm1vYmlsZV9ubyI6Ijc5MDQ5NTY0MjAiLCJpc192ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNjg3MTU0Njc0LCJleHAiOjE2ODcyNDEwNzR9.Iw18HiDIUms_Uii2C03YLuyTbGD-JvDd1FlXODmLIHc' in 'authToken' to the local storage
+		# Given I am on the page 'http://localhost:3000'
+		# Then I wait for 3 seconds
+		# When I click the element 'product-6'
+		# Then I wait for 3 seconds
+		# Then I should see 'Warranty, Insurance & AMC'
+		# Then I should see 'Update Extended Warranty Details'
+		# Then I should see 'Update details for Extended Warranty to keep your product in track'
+		# When I click the element 'updateDetails1'
+		# Then I should see 'Update Extended Warranty Details'
+		# When I click the element 'updateManually'
+		# Then I should see 'Update Extended Warranty Details'
+		# Then I type 'Aditya Birla ' in the 'serviceProviderName'
+        # Then I type '30-03-2023' in the 'purchaseDate'
+    	# # Then The element 'year' should be read only
+		# And I click the element 'months'
+		# Then I should see 'Upload Extended Warranty Document'
+		# #   When I click the element 'extendedWarrantyUpdate'
+        # # When I upload 'https://www.learnaws.org/assets/beginners-guide.pdf' to the element 'extendedWarrantyUpdate'
+		# # Then I should see 'Fridgeextendedwarranty.pdf'
+		#   When I click the 'Update'
+		# Then I should see 'Warranty, Insurance & AMC'
+
+# Feature: Update Details
+# 	As a user, I should be able to complete & update details of Warranty, Insurance & AMC
+
+# 	Scenario: As a user, I should be able to update Extended Warranty details from the added product’s Warranty, Insurance & AMC section
+# 				Given I am on the page 'http://localhost:3000/signin'
+# 		When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcsIm1vYmlsZV9ubyI6Ijc5MDQ5NTY0MjAiLCJpc192ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNjg3MTU0Njc0LCJleHAiOjE2ODcyNDEwNzR9.Iw18HiDIUms_Uii2C03YLuyTbGD-JvDd1FlXODmLIHc' in 'authToken' to the local storage
+# 		Given I am on the page 'http://localhost:3000'
+# 		Then I wait for 3 seconds
+# 		When I click the element 'product-7'
+# 		Then I wait for 3 seconds
+# 		Then I should see 'Warranty, Insurance & AMC'
+#         Then I should see 'Expiring On 20 Jun 24'
+# 		Then I should see 'Update Extended Warranty Details'
+# 		Then I should see 'Update details for Extended Warranty to keep your product in track'
+# 		When I click the element 'updateDetails1'
+# 		Then I should see 'Update Extended Warranty Details'
+# 		When I click the element 'updateManually'
+# 		Then I should see 'Update Extended Warranty Details'
+# 		Then I type 'Aditya Birla ' in the 'serviceProviderName'
+#                     #   Then I type 'qwe1234' in the 'serialNumber'
+#                        Then I type '30-03-2023' in the 'purchaseDate'
+#                     #    Then The element 'year' should be read only
+#                        And I click the element 'months'
+# 		Then I should see 'Update Extended Warranty Details'
+# 		#  Then I should see 'Fridgeextendedwarranty.pdf'
+# 		#   When I click the 'Update'
+# 		Then I should see 'Warranty, Insurance & AMC'
+
+
+Feature: Update Details
+	As a user, I should be able to complete & update details of Warranty, Insurance & AMC
+
+	Scenario: As a user, I should be able to update that the registered product has no Warranty
+		Given I am on the page 'http://localhost:3000/signin'
+		When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcsIm1vYmlsZV9ubyI6Ijc5MDQ5NTY0MjAiLCJpc192ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNjg3MTU0Njc0LCJleHAiOjE2ODcyNDEwNzR9.Iw18HiDIUms_Uii2C03YLuyTbGD-JvDd1FlXODmLIHc' in 'authToken' to the local storage
+		Given I am on the page 'http://localhost:3000'
+		Then I wait for 3 seconds
+		When I click the element 'product-7'
+		Then I should see 'Warranty, Insurance & AMC'
+		Then I should see 'Update Extended Warranty Details'
+		# Then I should see 'Update details for Warranty to keep your product in track'
+		When I click the element 'updateDetails1'
+		Then I wait for 2 seconds
+		Then I should see 'Update Extended Warranty Details'
+        When I click the element 'drawerCheck'
+        Then I click the 'Update'
+		Then I should see 'Warranty, Insurance & AMC'

@@ -1,0 +1,153 @@
+import LeftMessageArrow from '@core/ui/assets/leftArrowMessage.svg';
+import RightMessageArrow from '@core/ui/assets/rightArrowMessage.svg';
+import type { SxProps } from '@mui/material';
+
+interface CustomChatBotStyleProps {
+  [key: string]: SxProps;
+}
+
+export const customChatBotStyle: CustomChatBotStyleProps = {
+  rootSx: {},
+  mainBox: {
+    display: 'flex',
+    justifyContent: 'right',
+    alignItems: 'end',
+    width: '80%',
+    gap: 2.5,
+    mb: 2.5,
+    mt: 1,
+  },
+  mainRespondBox: {
+    display: 'flex',
+    justifyContent: 'left',
+    alignItems: 'end',
+    gap: 2.5,
+    mb: 2.5,
+    mt: 1,
+  },
+  clipSx: {
+    mb: 1,
+    px: 1.4,
+    borderRadius: '4px',
+    position: 'relative',
+    py: 1.4,
+    backgroundColor: 'primary.light',
+    color: 'background.surface.100',
+    boxShadow: '#0000000A 0px 2px 4px',
+    '::before': {
+      content: `""`,
+      position: 'absolute',
+      backgroundImage: `url(${RightMessageArrow})`,
+      bottom: '5%',
+      right: '-16px',
+      width: '17px',
+      height: '22px',
+      backgroundRepeat: 'no-repeat',
+    },
+  },
+  clipRespondSx: {
+    position: 'relative',
+    mb: 1,
+    px: 1.4,
+    borderRadius: '4px',
+    py: 1.4,
+    backgroundColor: 'grey.100',
+    color: 'text.700',
+    marginRight: '10%',
+    display: 'inline-block',
+    '::before': {
+      content: `""`,
+      position: 'absolute',
+      backgroundImage: `url(${LeftMessageArrow})`,
+      bottom: '5%',
+      left: '-10px',
+      width: '17px',
+      height: '22px',
+      backgroundRepeat: 'no-repeat',
+    },
+  },
+
+  clipMessageSx: {
+    position: 'relative',
+    mb: 1,
+    marginRight: '10%',
+    display: 'inline-block',
+    boxShadow: '0px 2px 4px #0000000A',
+    border: '1px solid',
+    borderColor: 'grey.A300',
+    borderRadius: '8px',
+  },
+
+  replyTestSx: {
+    color: 'background.surface.D200',
+    display: 'flex',
+    justifyContent: 'start',
+    fontSize: '12px',
+  },
+  respondTestSx: {
+    backgroundColor: 'grey.100',
+    color: 'text.700',
+    display: 'flex',
+    justifyContent: 'start',
+    fontSize: '12px',
+  },
+  initialRespondTestSx: {
+    px: 1.4,
+    py: 1.4,
+    backgroundColor: 'grey.100',
+    color: 'text.700',
+    display: 'flex',
+    justifyContent: 'start',
+    fontSize: '12px',
+    borderTopLeftRadius: '8px',
+    borderTopRightRadius: '8px',
+  },
+  startTestSx: {
+    color: 'primary.B800',
+    cursor: 'pointer',
+    px: 1.4,
+    py: 1.4,
+    backgroundColor: 'background.surface.100',
+    display: 'flex',
+    justifyContent: 'start',
+    fontSize: '12px',
+    borderBottomLeftRadius: '8px',
+    borderBottomRightRadius: '8px',
+  },
+  timeSx: {
+    color: 'text.500',
+    display: 'flex',
+    justifyContent: 'end',
+    fontSize: '12px',
+  },
+  timeRespondSx: {
+    color: 'text.500',
+    display: 'flex',
+    justifyContent: 'start',
+    fontSize: '12px',
+  },
+  profileBox: {
+    borderRadius: '50%',
+    backgroundColor: 'primary.300',
+    marginBottom: '25px',
+  },
+  chatBotIconSx: {
+    height: '25px',
+    minWidth: '25px',
+    borderRadius: '50%',
+    backgroundColor: 'primary.300',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: '25px',
+  },
+  profileAvatarSx: {
+    borderRadius: '50%',
+    border: '5px solid',
+    borderColor: 'primary.light',
+  },
+  avatarSx: {
+    backgroundColor: 'primary.light',
+    color: 'common.white',
+  },
+};

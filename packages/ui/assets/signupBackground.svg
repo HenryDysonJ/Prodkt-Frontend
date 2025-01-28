@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="812" viewBox="0 0 375 812">
+  <defs>
+    <linearGradient id="linear-gradient" y1="1" x2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0b65d6"/>
+      <stop offset="1" stop-color="#458ce6"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_59282" data-name="Rectangle 59282" width="97" height="812" transform="translate(2877 -6131)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientTransform="matrix(-1, 0, 0, 1, 1, 0)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2373da"/>
+      <stop offset="1" stop-color="#2b78d9"/>
+    </radialGradient>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_59284" data-name="Rectangle 59284" width="375" height="812" transform="translate(1610 1272)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <radialGradient id="radial-gradient-2" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4b98fa"/>
+      <stop offset="1" stop-color="#2f80e7"/>
+    </radialGradient>
+  </defs>
+  <g id="Login_SVG" data-name="Login SVG" transform="translate(-2599 6131)">
+    <g id="Rectangle_59280" data-name="Rectangle 59280" transform="translate(2599 -6131)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="8" height="46" stroke="none"/>
+      <rect x="0.5" y="0.5" width="7" height="45" fill="none"/>
+    </g>
+    <rect id="Rectangle_59281" data-name="Rectangle 59281" width="375" height="812" transform="translate(2599 -6131)" fill="url(#linear-gradient)"/>
+    <rect id="Rectangle_59286" data-name="Rectangle 59286" width="375" height="812" transform="translate(2599 -6131)" fill="none"/>
+    <g id="Mask_Group_97" data-name="Mask Group 97" clip-path="url(#clip-path)">
+      <path id="Path_28416" data-name="Path 28416" d="M967.058,1343.75s-61.189,176.053-460.53,381.091,471.265,345.666,471.265,345.666Z" transform="translate(2510.176 -7807.417)" fill="url(#radial-gradient)"/>
+    </g>
+    <g id="Mask_Group_96" data-name="Mask Group 96" transform="translate(989 -7403)" clip-path="url(#clip-path-2)">
+      <path id="Path_28418" data-name="Path 28418" d="M412.461,1343.75s61.189,176.053,460.53,381.091-471.265,345.666-471.265,345.666Z" transform="translate(972.304 -87.417)" fill="url(#radial-gradient-2)"/>
+    </g>
+    <rect id="Rectangle_59285" data-name="Rectangle 59285" width="375" height="812" transform="translate(2599 -6131)" fill="none"/>
+  </g>
+</svg>

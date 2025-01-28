@@ -1,0 +1,211 @@
+
+
+
+export const listStyle = {
+    rootSx: {
+        height: "calc(100vh - 196px)",
+        m: 2,
+        borderRadius: '12px',
+        backgroundColor: 'primary.contrastText',
+        p: 2,
+    },
+    mainBox: {
+        //   margin: '2.4rem',
+        //   p: '1.6rem',
+        backgroundColor: "primary.contrastText",
+        borderRadius: "1.2rem",
+        display: "flex",
+        justifyContent: "space-between",
+        // flexDirection: "column",
+        height: "calc(100vh - 226px) !important",
+        // overflow: "auto",
+    },
+    divider: {
+        height: "3.2rem",
+        marginInlineStart: "1.6rem",
+        marginInlineEnd: "1.6rem",
+    },
+    gridbutton: {
+        display: "flex",
+        justifyContent: "flex-end",
+        alignItems: "center",
+    },
+    addNewButton: {
+        borderRadius: "0.8rem",
+        backgroundColor: "primary.main",
+        height: "4rem",
+        boxShadow: "none",
+        ":hover": {
+            backgroundColor: "primary.main",
+            boxShadow: "none",
+        },
+        textTransform: "capitalize",
+        fontSize: "1.4rem",
+        fontWeight: 500,
+        lineHeight: "2rem",
+    },
+    filterIcon: {
+        height: "4rem",
+        width: "4rem",
+        display: "grid",
+        placeItems: "center",
+        borderRadius: "0.8rem",
+        cursor: "pointer",
+        marginInlineStart: "1.6rem",
+    },
+    buttonItemContainer: {
+        'display': 'flex',
+        'cursor': 'pointer',
+        'padding': '0rem',
+        'borderRadius': '0.8rem',
+        'justifyContent': 'center',
+        'alignItems': 'center',
+        'backgroundColor': 'primary.contrastText',
+        ':hover': {
+            borderColor: 'custom.outline',
+            'backgroundColor': 'primary.contrastText',
+        },
+        'mr': -1.3,
+    },
+    badgeSx: {
+        '& .MuiBadge-badge': {
+            height: '0.6rem',
+            minWidth: '0.6rem',
+            left: '2.4rem',
+            position: 'absolute',
+            top: '1rem',
+            width: '0.6rem',
+        },
+    },
+    addNewSx: {
+        color: 'primary.contrastText',
+        textAlign: 'center',
+        fontSize: '1.4rem',
+        fontStyle: 'normal',
+        fontWeight: 500,
+        lineHeight: '2rem',
+        borderRadius: '0.8rem',
+        height: '4rem',
+        textTransform: 'capitalize',
+        backgroundColor: "primary.main",
+        boxShadow: 'none',
+        mt: '1.6rem',
+        ':hover': {
+            boxShadow: 'none',
+            backgroundColor: "primary.main",
+        },
+    },
+    centerItem: {
+        height: '52vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    productInfo: {
+        fontSize: '1.4rem',
+        fontStyle: 'normal',
+        fontWeight: 500,
+        lineHeight: '2rem',
+        color: 'text.secondary',
+        mt: 2
+    },
+    popoverStyle: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        padding: '1.6rem',
+        borderRadius: '0.8rem',
+        backgroundColor: 'primary.contrastText',
+        gap: '1.2rem',
+    },
+    viewTextStyle: {
+        cursor: 'pointer',
+        color: 'text.primary',
+        fontFamily: 'Sarabun',
+        fontSize: '1.4rem',
+        fontStyle: 'normal',
+        fontWeight: 500,
+        lineHeight: '2rem',
+    },
+    paginationCountTextStyle: {
+        fontSize: "1.2rem",
+        fontWeight: "400",
+        lineHeight: "1.6rem",
+        color: "text.secondary",
+    },
+    paginationBoxStyle: {
+        '& .MuiSelect-icon': {
+            top: '0.2rem',
+            right: '-0.2rem',
+        },
+    },
+
+    dialogmodal: {
+        "& .MuiPaper-root": {
+            borderRadius: "0.8rem",
+            width: "100%",
+        },
+        "& .MuiDialogActions-root": {
+            padding: "1.6rem",
+            boxShadow: "0rem -0.2rem 1.6rem 0rem rgba(0, 0, 0, 0.08)",
+        },
+    },
+    titleStyleDialog: {
+        fontSize: "1.6rem",
+        fontWeight: 600,
+        color: "custom.onSurface",
+    },
+    dialogBodyStyle: {
+        p: "1.6rem",
+    },
+    resetButtonSx: {
+        width: "100%",
+        borderRadius: "0.8rem",
+        borderColor: "primary.main",
+        color: "primary.main",
+        textTransform: "capitalize",
+        boxShadow: "none",
+        height: "4rem",
+        fontWeight: 500,
+        fontSize: "1.4rem",
+        ":hover": {
+            boxShadow: "none",
+            bgcolor: "#fff",
+            color: "primary.main",
+            borderColor: "primary.main",
+        },
+    },
+    applyFilterButtonSx: {
+        width: "100%",
+        textTransform: "capitalize",
+        backgroundColor: "primary.main",
+        borderRadius: "0.8rem",
+        boxShadow: "none",
+        height: "4rem",
+        fontWeight: 500,
+        fontSize: "1.4rem",
+        ":hover": {
+            boxShadow: "none",
+            backgroundColor: "primary.main",
+        },
+    },
+    selectChipHeaderTextSx: {
+        fontSize: "1.4rem",
+        fontStyle: "normal",
+        fontWeight: "400",
+        lineHeight: "2rem",
+        color: "custom.onSurfaceVariant",
+    },
+    textStyleSelect: {
+        fontSize: "1.4rem",
+        fontWeight: 500,
+        color: "custom.onSurface",
+        marginInline: "0.4rem",
+    },
+    itemBox: {},
+    pageSx: {
+        height: '100%',
+        alignItems: "flex-end",
+        display: "grid"
+    }
+}

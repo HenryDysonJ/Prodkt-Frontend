@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+.cardStyle {
+  @apply shadow-cardSection flex flex-col items-center mb-[30px] lg:mb-14 md:mx-0 lg:mx-0 rounded-firstSection;
+}
+
+.cardIconCircleStyle {
+  @apply w-24 h-24 bg-circleColor rounded-full mt-11 mb-14 flex justify-center items-center;
+}
+
+.cardHeader {
+  @apply text-cardHeaderFontSize text-secTwoHeaderColorOne font-medium leading-cardHeaderLineHeight text-center pb-2;
+}
+
+.cardDescription {
+  @apply text-xs font-poppins text-center font-light text-descriptionColor leading-secTwoLeftDescriptionLineHeight pb-7;
+}
+
+.quotesStyle {
+  @apply text-quotesFontSize text-white font-poppins font-normal italic h-[50px] pt-[5px] pl-[14px];
+}
+
+.leftText {
+  @apply text-sm text-secTwoHeaderColorOne font-semibold font-poppins mb-[6px] w-[130px];
+}
+
+.rightText {
+  @apply text-sm text-descriptionColor font-light font-poppins mb-[6px];
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* For modern browsers */
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* For older versions of Firefox */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.tabs .active p {
+  color: #649de1 !important;
+}
+
+
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}

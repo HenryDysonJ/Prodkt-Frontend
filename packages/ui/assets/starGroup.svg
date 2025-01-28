@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="113" height="109.899" viewBox="0 0 113 109.899">
+  <g id="Group_102585" data-name="Group 102585" transform="translate(-35 -132.101)">
+    <path id="Polygon_36" data-name="Polygon 36" d="M3.628,1.549a1,1,0,0,1,1.743,0l2.79,4.96A1,1,0,0,1,7.29,8H1.71A1,1,0,0,1,.838,6.51Z" transform="translate(35 159)" fill="#ffcf8f" opacity="0.47"/>
+    <path id="Union_41" data-name="Union 41" d="M2.889,6.889V5.111H1.112a1.111,1.111,0,1,1,0-2.222H2.889V1.112a1.111,1.111,0,1,1,2.222,0V2.889H6.889a1.111,1.111,0,1,1,0,2.222H5.111V6.889a1.111,1.111,0,1,1-2.222,0Z" transform="translate(35.99 209)" fill="#fac57e" opacity="0.47"/>
+    <path id="Union_42" data-name="Union 42" d="M2.889,6.889V5.111H1.112a1.111,1.111,0,1,1,0-2.222H2.889V1.112a1.111,1.111,0,1,1,2.222,0V2.889H6.889a1.111,1.111,0,1,1,0,2.222H5.111V6.889a1.111,1.111,0,1,1-2.222,0Z" transform="matrix(0.966, 0.259, -0.259, 0.966, 69.671, 132.101)" fill="#ffe5c3"/>
+    <rect id="Rectangle_44805" data-name="Rectangle 44805" width="5" height="5" rx="1" transform="translate(70 226)" fill="#ff980e" opacity="0.21"/>
+    <circle id="Ellipse_39515" data-name="Ellipse 39515" cx="3" cy="3" r="3" transform="translate(141 236)" fill="#ffb270" opacity="0.47"/>
+    <circle id="Ellipse_39516" data-name="Ellipse 39516" cx="3" cy="3" r="3" transform="translate(142 164)" fill="#ff980e" opacity="0.47"/>
+  </g>
+</svg>

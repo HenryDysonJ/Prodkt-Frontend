@@ -1,0 +1,39 @@
+{
+  "extends": "tsconfig/react-library.json",
+  "include": [
+    "src",
+    "../../packages/ui/components/rootLayout"
+  ],
+  "compilerOptions": {
+    "types": [
+      "vite/client",
+      "vite-plugin-pwa/client"
+    ],
+    "baseUrl": "./src",
+    "paths": {
+      "@router": [
+        "router"
+      ],
+      "@router/*": [
+        "router/*"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ],
+      "@pages": [
+        "pages"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ],
+      "@styles": [
+        "styles"
+      ]
+    },
+  },
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}

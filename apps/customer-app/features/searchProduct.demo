@@ -1,0 +1,50 @@
+Feature: Search A Product
+
+
+    Scenario: User should be able to search a product
+        Given I am on the page 'http://localhost:3000/signin'
+        When I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDU4LCJtb2JpbGVfbm8iOiI4MDcyOTAxNjI4IiwiaXNfdmVyaWZpZWQiOnRydWUsImlhdCI6MTY4NjgyMjY2NCwiZXhwIjoxNjg2OTA5MDY0fQ.EBg4E97QTpR1yjW5ZAFyqMoGJcLxs8v-xvPzGcAWHdI' in 'authToken' to the local storage
+        Then I go to 'http://localhost:3000/'
+        When I click the element 'addNewProduct'
+        Then I should see 'Add Product'
+        When I click the element 'searchAdd'
+        Then The url should be 'http://localhost:3000/searchproduct'
+        When I type 'i phone 13' in the 'searchField'
+        Then I wait for 5 seconds
+        Then I should see 'APPLE iPhone 13 512gb starlight'
+        Then I should see 'APPLE iPhone 13 512gb pink'
+        Then I should see 'APPLE iPhone 13 256gb pink'
+        Then I should see 'APPLE iPhone 13 512gb midnight'
+        When I click the element 'addProduct1'
+
+    Scenario: User should be to search and add a product from the 'Products to be added' section in homepage
+
+        Given I am on the page 'http://localhost:3000/signin'
+        Then I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDU4LCJtb2JpbGVfbm8iOiI4MDcyOTAxNjI4IiwiaXNfdmVyaWZpZWQiOnRydWUsImlhdCI6MTY4NjgyMjY2NCwiZXhwIjoxNjg2OTA5MDY0fQ.EBg4E97QTpR1yjW5ZAFyqMoGJcLxs8v-xvPzGcAWHdI' in 'authToken' to the local storage
+        Then I go to 'http://localhost:3000/'
+        Then I wait for 5 seconds
+        Then I should see 'Products To Be Added'
+        When I click the element 'click-0'
+        Then I should see 'Add Product'
+        When I click the element 'searchAdd'
+        Then The url should be 'http://localhost:3000/searchproduct'
+        When I type 'i phone 13' in the 'searchField'
+        Then I wait for 5 seconds
+        Then I should see 'APPLE iPhone 13 512gb starlight'
+        Then I should see 'APPLE iPhone 13 512gb pink'
+        Then I should see 'APPLE iPhone 13 256gb pink'
+        Then I should see 'APPLE iPhone 13 512gb midnight'
+        When I click the element 'addProduct1'
+
+    Scenario: User should be able to see 'Didn't Find your Product' if product is unable to be found in the 'Search page'
+
+        Given I am on the page 'http://localhost:3000/signin'
+        Then I set the auth token 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDU4LCJtb2JpbGVfbm8iOiI4MDcyOTAxNjI4IiwiaXNfdmVyaWZpZWQiOnRydWUsImlhdCI6MTY4NjgyMjY2NCwiZXhwIjoxNjg2OTA5MDY0fQ.EBg4E97QTpR1yjW5ZAFyqMoGJcLxs8v-xvPzGcAWHdI' in 'authToken' to the local storage
+        Then I go to 'http://localhost:3000/'
+        When I click the element 'addNewProduct'
+        Then I should see 'Add Product'
+        When I click the element 'searchAdd'
+        Then The url should be 'http://localhost:3000/searchproduct'
+        When I type 'dummy phone' in the 'searchField'
+        Then I should see 'find your product'
+        Then I click the element 'clickHereToAdd'

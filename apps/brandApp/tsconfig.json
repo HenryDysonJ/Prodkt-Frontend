@@ -1,0 +1,19 @@
+{
+  "extends": "tsconfig/react-library.json",
+  "include": ["src", "../../packages/ui/components/rootLayout", "../../packages/utils/hooks"],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "types": ["vite/client"],
+    "baseUrl": "./src",
+    "paths": {
+      "@router": ["router"],
+      "@router/*": ["router/*"],
+      "@pages/*": ["pages/*"],
+      "@pages": ["pages"],
+      "@styles/*": ["styles/*"],
+      "@styles": ["styles"],
+      "@assets":["assets"]
+    }
+  },
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
